@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "headers": [
+    {
+      "source": "/api/image",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "DEBUG": "avatar-ui:*"
+  }
+}
